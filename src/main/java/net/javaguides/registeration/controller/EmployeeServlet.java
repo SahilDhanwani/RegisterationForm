@@ -1,5 +1,6 @@
 package net.javaguides.registeration.controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import net.javaguides.registeration.model.Employee;
 
 import java.io.IOException;
 
+@WebServlet("/register")
 public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -26,8 +28,11 @@ public class EmployeeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Views/employeeregister.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**
@@ -60,6 +65,9 @@ public class EmployeeServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Views/employeedetails.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
