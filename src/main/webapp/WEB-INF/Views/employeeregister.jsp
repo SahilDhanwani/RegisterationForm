@@ -10,7 +10,7 @@
 
     <body>
         <h1>Employee Register Form</h1>
-        <form action="<%= request.getContextPath() %>/register>" method="post">
+        <form action="<%= request.getContextPath() %>/register" method="post">
             <table style="with: 50%">
                 <tr>
                     <td>First Name</td>
