@@ -8,6 +8,7 @@ public class Employee {
     private String password;
     private String address;
     private String contact;
+    
     public String getFirstName() {
         return firstName;
     }

@@ -15,17 +15,10 @@ import java.io.IOException;
 public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Default constructor.
-	 */
 	public EmployeeServlet() {
-		// TODO Auto-generated constructor stub
+
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
@@ -35,10 +28,6 @@ public class EmployeeServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
